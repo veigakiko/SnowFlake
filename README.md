@@ -1,4 +1,10 @@
-# Connection with SnowFlake
+# Connect to Snowflake
+
+
+```sh
+!pip install snowflake-connector-python
+
+```
 
 
 ```sh
@@ -21,4 +27,9 @@ try:
     print("Successfully connected to Snowflake!")
 except Exception as e:
     print(f"Connection error: {e}")
+```
+
+
+```sh
+conn.cursor().execute("SELECT CURRENT_DATABASE(), CURRENT_SCHEMA()").fetchall()
 ```
